@@ -6,6 +6,7 @@ export class LoginPage {
     private emailInput: Locator;
     private passwordInput: Locator;
     private loginButton: Locator;
+    private loginErrorHeader:Locator;
 
 
     constructor(page: Page) {
@@ -15,7 +16,8 @@ export class LoginPage {
         this.emailInput = page.locator('#user-name');
         this.passwordInput = page.locator('#password');
         this.loginButton = page.locator("#login-button");
+        this.loginErrorHeader=page.locator("//h3[@data-test='error']")
     }
-    
+
 
 }
