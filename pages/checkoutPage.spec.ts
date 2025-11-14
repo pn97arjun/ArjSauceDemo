@@ -19,5 +19,18 @@ export class CheckoutPage {
 
     }
 
+    async fillCheckoutInfo(fname:string,lname:string,zcode:string)
+    {
+        await this.firstNameInput.fill(fname)
+        await this.lastNameInput.fill(lname)
+        await this.zipCodeInput.fill(zcode)
+        await this.continueBtn.click()
+        await test.step(`Checkout info is filled`, async () => { });
+         await test.info().attach('Checkout Info Page Screenshot', {
+            body: await this.page.screenshot(),
+            contentType: 'image/png'
+        });
+    }
+
 
 }

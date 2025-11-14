@@ -1,0 +1,3 @@
+id,username,password,product,firstname,lastname,zipcode
+TC1,standard_user,U2FsdGVkX1/dBvFy65sTCQ/mh8rvaGt1HoHySDedHlM=,Sauce Labs Onesie,john,wright,575005
+TC2,performance_glitch_user,U2FsdGVkX1/dBvFy65sTCQ/mh8rvaGt1HoHySDedHlM=,Sauce Labs Bike Light,marnus,labuschien,575006

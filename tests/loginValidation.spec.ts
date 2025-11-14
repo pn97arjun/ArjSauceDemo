@@ -2,8 +2,7 @@ import { test, expect, Locator } from '@playwright/test';
 import fs from 'fs';
 import { parse } from 'csv-parse/sync';
 import dotenv from 'dotenv';
-import { decryptData } from '../Utility/commonUtil';
-import { LoginPage } from '../pages/lginPage.spec';
+import { LoginPage } from '../pages/loginPage.spec';
 interface TestDataRecord {
     id: string;
     username: string;
@@ -16,10 +15,10 @@ const records = parse(fs.readFileSync('testdata/login.csv'), {
     skip_empty_lines: true,
 }) as TestDataRecord[];
 
-
+test.describe("Login test",()=>{
 for (const recorde of records) {
 
-    test(`${recorde.id} ${recorde.username} Login validation Test`, async ({ page }) => {
+    test(`${recorde.id} ${recorde.username} @smoke Login validation Test`, async ({ page }) => {
 
         const loginPage=new LoginPage(page)
         dotenv.config();
@@ -32,6 +31,7 @@ for (const recorde of records) {
     });
 
 }
+})
 
 
 

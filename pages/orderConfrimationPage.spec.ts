@@ -15,5 +15,14 @@ export class OrderConfirmationPage {
        
     }
     
+    async orderConfirmationValidation()
+    {
+        expect(this.orderConfirmHeader).toBeVisible()
+        await test.step(`Order is Confirmed`, async () => { });
+         await test.info().attach('Order Confirmation Page Screenshot', {
+            body: await this.page.screenshot(),
+            contentType: 'image/png'
+        });
+    }
 
 }
