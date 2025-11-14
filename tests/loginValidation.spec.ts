@@ -18,7 +18,7 @@ const records = parse(fs.readFileSync('testdata/login.csv'), {
 test.describe("Login test",()=>{
 for (const recorde of records) {
 
-    test(`${recorde.id} ${recorde.username} @smoke Login validation Test`, async ({ page }) => {
+    test(`${recorde.id} ${recorde.username} @smoke @Loginvalidation Login validation Test`, async ({ page }) => {
 
         const loginPage=new LoginPage(page)
         dotenv.config();
