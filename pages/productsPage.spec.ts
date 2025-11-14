@@ -4,7 +4,7 @@ import {expect,type Locator,type Page,test} from '@playwright/test';
 export class ProdutsPage {
     private page: Page;
     private productSort: Locator;
-    private cartBtn:Locator;
+    public cartBtn:Locator;
 
 
     constructor(page: Page) {
