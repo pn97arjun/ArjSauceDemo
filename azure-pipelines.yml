@@ -24,7 +24,7 @@ steps:
     CI: 'true'
 - task: PublishAllureReport@1
   inputs:
-    allureVersion: '3.4.2'
+    allureVersion: '2.27.0'
     testResultsDir: '$(System.DefaultWorkingDirectory)/allure-results'
-  displayName: 'Publish Allure Report'
+  displayName: 'Publish Report'
   condition: always()
