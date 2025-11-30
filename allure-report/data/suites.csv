@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","195","@smoke @apitest API test scenatio","chromium","Sun Nov 30 12:32:42 IST 2025","passed","Sun Nov 30 12:32:42 IST 2025","","apitest.spec.ts","",""
+"","67","@smoke @apitest url reponse check","chromium","Sun Nov 30 12:32:42 IST 2025","passed","Sun Nov 30 12:32:42 IST 2025","","apitest.spec.ts","",""
+"","3638","TC2 locked_out_user @smoke @Loginvalidation Login validation Test","chromium","Sun Nov 30 12:32:48 IST 2025","passed","Sun Nov 30 12:32:52 IST 2025","Login test","loginValidation.spec.ts","",""
+"","6211","TC1 standard_user Sauce Labs Onesie @smoke @placeorder Place order validation","chromium","Sun Nov 30 12:32:42 IST 2025","passed","Sun Nov 30 12:32:49 IST 2025","Place order test","placeOrder.spec.ts","",""
+"","14170","TC2 performance_glitch_user Sauce Labs Bike Light @smoke @placeorder Place order validation","chromium","Sun Nov 30 12:32:49 IST 2025","passed","Sun Nov 30 12:33:03 IST 2025","Place order test","placeOrder.spec.ts","",""
+"","5612","TC1 standard_user @smoke @Loginvalidation Login validation Test","chromium","Sun Nov 30 12:32:42 IST 2025","passed","Sun Nov 30 12:32:48 IST 2025","Login test","loginValidation.spec.ts","",""
