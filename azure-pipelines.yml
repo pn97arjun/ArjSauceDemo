@@ -18,13 +18,13 @@ steps:
   displayName: 'npm ci'
 - script: npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
-- script: npx playwright test --reporter=html
+- script: npx playwright test --reporter=allure-playwright
   displayName: 'Run Playwright tests'
   env:
     CI: 'true'
-- task: PublishPipelineArtifact@1
+- task: PublishAllureReport@1
   inputs:
-    targetPath: 'playwright-report'
-    artifact: 'test-report'
-    publishLocation: 'pipeline'
-  condition: succeededOrFailed()  
+    allureVersion: '3.4.2'
+    testResultsDir: '$(System.DefaultWorkingDirectory)/allure-results'
+  displayName: 'Publish Allure Report'
+  condition: always()
