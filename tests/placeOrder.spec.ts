@@ -28,7 +28,7 @@ const records = parse(fs.readFileSync('testdata/placeorder.csv'), {
 test.describe("Place order test",()=>{
 for (const recorde of records) {
 
-    test(`${recorde.id} ${recorde.username} @smoke @placeorder Place order validation`, async ({ page }) => {
+    test(`${recorde.id} ${recorde.username} ${recorde.product} @smoke @placeorder Place order validation`, async ({ page }) => {
 
         const loginPage=new LoginPage(page)
         const productPage=new ProdutsPage(page)
