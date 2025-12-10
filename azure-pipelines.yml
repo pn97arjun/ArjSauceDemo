@@ -6,6 +6,13 @@
 trigger:
 - main
 
+schedules:
+- cron: "0 23 * * *"
+  displayName: 'Daily 11 PM run'
+  branches:
+    include:
+    - main
+  always: true
 pool:
   vmImage: ubuntu-latest
 
@@ -18,7 +25,7 @@ steps:
   displayName: 'npm ci'
 - script: npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
-- script: npx play  wright test --reporter=allure-playwright,html
+- script: npx playwright test --reporter=allure-playwright,html
   displayName: 'Run Playwright tests'
   env:
     CI: 'true'
