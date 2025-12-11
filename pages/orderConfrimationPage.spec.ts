@@ -1,5 +1,5 @@
 import {expect,type Locator,type Page,test} from '@playwright/test';
-
+import { writetocsv } from '../Utility/practice.spec';
 
 export class OrderConfirmationPage {
     private page: Page;
@@ -18,6 +18,7 @@ export class OrderConfirmationPage {
     async orderConfirmationValidation()
     {
         expect(this.orderConfirmHeader).toBeVisible()
+        writetocsv("India","User1")
         await test.step(`Order is Confirmed`, async () => { });
          await test.info().attach('Order Confirmation Page Screenshot', {
             body: await this.page.screenshot(),

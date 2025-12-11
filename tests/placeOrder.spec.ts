@@ -9,6 +9,7 @@ import { CheckoutPage } from '../pages/checkoutPage.spec';
 import { CheckoutReviewPage } from '../pages/checkoutReviewPage.spec';
 import { OrderConfirmationPage } from '../pages/orderConfrimationPage.spec';
 
+
 interface TestDataRecord {
     id: string;
     username: string;
